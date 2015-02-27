@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 require('fs');
 
 var strDir = __dirname,

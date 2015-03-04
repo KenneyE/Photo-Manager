@@ -3,17 +3,21 @@
 require('fs');
 
 var strDir = __dirname,
-    strName = process.argv[0],
-    strPictureDir = "/Users/erickenney/Pictures/",
-    strFileName,
-    strFileExtension;
+strName = process.argv[0],
+strPictureDir = "/Users/erickenney/Pictures/",
+strFileName,
+strFileExtension;
 
-fs.readdir(strDir, function(err, files) {
-    files.forEach(function (file, iPhotoInd) {
+strPictureDir += new Date().toISOString().slice(0,10) + strFileName + "/";
+fs.mkdir(strPictureDir, function()
+{
+    fs.readdir(strDir, function(err, files) {
+        files.forEach(function (file, iPhotoInd) {
 
-        strFileExtension = file.split(".").pop();
-        strFileName = strPictureDir + strName + pad(iPhotoInd + 1) + "." + strFileExtension;
-        fs.createReadStream(file).pipe(fs.createWriteStream(strFileName));
+            strFileExtension = file.split(".").pop();
+            strFileName = strPictureDir + strName + pad(iPhotoInd + 1) + "." + strFileExtension;
+            fs.createReadStream(file).pipe(fs.createWriteStream(strFileName));
+        });
     });
 });
 

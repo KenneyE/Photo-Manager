@@ -1,0 +1,19 @@
+{
+  "name": "photo-manager",
+  "version": "0.0.0",
+  "description": "",
+  "main": "photo-transfer.js",
+  "scripts": {
+    "test": "photo-transfer \"Test Directory\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KenneyE/Photo-Manager.git"
+  },
+  "author": "Eric Kenney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KenneyE/Photo-Manager/issues"
+  },
+  "homepage": "https://github.com/KenneyE/Photo-Manager"
+}

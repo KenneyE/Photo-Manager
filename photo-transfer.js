@@ -4,7 +4,7 @@ require('fs');
 
 var strDir = __dirname,
     strName = process.argv[0],
-    strPictureDir = "",
+    strPictureDir = "/Users/erickenney/Pictures/",
     strFileName,
     strFileExtension;
 
